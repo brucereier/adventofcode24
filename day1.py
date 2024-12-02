@@ -1,3 +1,4 @@
+from collections import Counter
 f = open("./inputs/day1.txt", "r")
 
 nums1, nums2 = [], []
@@ -15,3 +16,14 @@ for i in range(len(nums1)):
     dist += abs(nums1[i] - nums2[i])
 
 print(dist)
+
+##part 2
+
+right_count = Counter(nums2)
+
+sim = 0
+for x in nums1:
+    if x in right_count:
+        sim += x * right_count[x]
+
+print(sim)
