@@ -38,7 +38,6 @@ while start < str_len:
         start = find + 1
         continue
     i += 1
-    
     last_dont = input.rfind("don't()", 0, find)
     last_do = input.rfind("do()", 0, find)
     if last_do >= last_dont:
@@ -47,7 +46,3 @@ while start < str_len:
     start = i
 
 print(cur)
-
-
-
-
